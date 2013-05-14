@@ -2,10 +2,10 @@
 #
 # Add 'encoding: UTF-8' to all files
 #
-#     $ rake check_encoding_headers
+#     $ rake encoding_headers
 
-desc "Manage the encoding header of Ruby files"
-task :check_encoding_headers => :environment do
+desc "Adds the missing utf-8 encoding header on all Ruby files"
+task :encoding_headers => :environment do
   files = []
   ["*.rb", "*.rake"].each do |extension|
     files.concat(Dir[ File.join(Dir.getwd.split(/\\/), "**", extension) ])
