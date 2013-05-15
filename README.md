@@ -2,23 +2,41 @@
 
 This is a collection of usefull Rake tasks for Rails.
 
-## Truncate
+## Install
+
+Add this line to your Gemfile to install it with Bundler:
+
+```ruby
+gem "rateaux", github: "sunny/rateaux"
+```
+
+Then type `bundle install` in a terminal.
+
+## Rake Tasks
+
+### Truncate
 
 Truncate all data from the current SQL database.
 
-    $ rake db:truncate
+```sh
+$ rake db:truncate
+```
 
-## Encoding headers
+### Encoding headers
 
-Add the '# encoding: UTF-8' header to all ruby files in the project.
+Add the `# encoding: UTF-8` header to all ruby files in the project.
 
-    $ rake encoding_headers
+```sh
+$ rake encoding_headers
+```
 
-## Checkout
+### Checkout
 
 Remove migrations then checkout a git branch.
 
-    $ rake checkout new_branch_name
+```sh
+$ rake checkout new_branch_name
+```
 
 This will:
 
