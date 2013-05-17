@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Rateaux::VERSION
   s.authors     = ["Sunny Ripert"]
   s.email       = ["sunny@sunfox.org"]
-  s.homepage    = "http://sunfox.org"
+  s.homepage    = "http://github.com/sunny/rateaux"
   s.summary     = "A collection of usefull Rake tasks for Rails."
   s.description = "A collection of usefull Rake tasks for Rails."
 
