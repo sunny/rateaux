@@ -7,7 +7,7 @@ This is a collection of usefull Rake tasks for Rails.
 Add this line to your Gemfile to install it with Bundler:
 
 ```ruby
-gem "rateaux", github: "sunny/rateaux"
+gem "rateaux"
 ```
 
 Then type `bundle install` in a terminal.
