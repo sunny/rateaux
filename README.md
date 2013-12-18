@@ -46,3 +46,11 @@ This will:
 3. Check out the other branch
 4. Run any new migrations existing in the other branch
 5. Update your test database
+
+### Cache clear
+
+Empty the cache store:
+
+```sh
+$ rake cache_clear
+```
