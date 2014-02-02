@@ -16,7 +16,7 @@ Then type `bundle install` in a terminal.
 
 ### Truncate
 
-Truncate all data from the current SQL database.
+Truncate all data from the current SQL database. This removes all the data but keeps the tables.
 
 ```sh
 $ rake db:truncate
@@ -24,7 +24,7 @@ $ rake db:truncate
 
 ### Encoding headers
 
-Add the `# encoding: UTF-8` header to all ruby files in the project.
+Add the `# encoding: UTF-8` header to all ruby files in the project. Useful before Ruby 2.
 
 ```sh
 $ rake encoding_headers
@@ -49,7 +49,7 @@ This will:
 
 ### Cache clear
 
-Empty the cache store:
+Empty the cache store.
 
 ```sh
 $ rake cache_clear
