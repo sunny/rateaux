@@ -54,3 +54,11 @@ Empty the cache store:
 ```sh
 $ rake cache_clear
 ```
+
+### Assets Copy Non Digested
+
+Copy assets files with a digest (for example `application-d45e…565.css`) to their non-digested form (for example `application.css`).
+
+```sh
+$ rake assets:copy_non_digested
+```
