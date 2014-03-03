@@ -1,7 +1,7 @@
 require "rateaux/namespaced"
 include Rateaux::Namespaced
 
-desc "Bar and spam"
+desc "Namespaced example: bar and spam"
 namespaced :foo, [:bar, :spam] do
   desc "Bar"
   task :bar do
