@@ -23,16 +23,16 @@ describe "#namespaced" do
     expect(rake).to have_received(:task).with(foo: :"foo:default")
   end
 
-  it 'adds a the given tasks as a default' do
+  it 'adds the given task as a default' do
+    rake.namespaced(:foo, :bar)
+
+    expect(rake).to have_received(:task).with(foo: :"foo:bar")
+  end
+
+  it 'adds a list of given tasks as a default' do
     rake.namespaced(:foo, [:bar, :spam])
 
     expect(rake).to have_received(:task).with(foo: [:"foo:bar", :"foo:spam"])
   end
 
-
-  it 'adds a the single given task as a default' do
-    rake.namespaced(:foo, :bar)
-
-    expect(rake).to have_received(:task).with(foo: :"foo:bar")
-  end
 end

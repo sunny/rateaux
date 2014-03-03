@@ -36,14 +36,16 @@
 #
 module Rateaux
   module Namespaced
-    def namespaced(name, defaults = [])
-      defaults = [defaults] if defaults.kind_of?(Symbol)
-
-      if defaults.empty?
-        task name => :"#{name}:default"
+    def namespaced(name, defaults = :default)
+      case defaults
+      when Symbol, String
+        task name => :"#{name}:#{defaults}"
+      when nil
+        task name
       else
         task name => defaults.to_a.map { |t| :"#{name}:#{t}" }
       end
+
       namespace name do
         yield
       end
