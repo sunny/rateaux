@@ -32,18 +32,18 @@
 # Both definitions add a task "export" that cals "export:a" and "export:b"
 # without having to add:
 #
-#     task export: [:"export:a", :"export:b"]
+#     task export: ["export:a", "export:b"]
 #
 module Rateaux
   module Namespaced
     def namespaced(name, defaults = :default)
       case defaults
       when Symbol, String
-        task name => :"#{name}:#{defaults}"
+        task name => "#{name}:#{defaults}"
       when nil
         task name
       else
-        task name => defaults.to_a.map { |t| :"#{name}:#{t}" }
+        task name => defaults.to_a.map { |t| "#{name}:#{t}" }
       end
 
       namespace name do
