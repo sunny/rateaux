@@ -22,6 +22,14 @@ Truncate all data from the current SQL database. This removes all the data but k
 $ rake db:truncate
 ```
 
+### Delete
+
+Delete all data from the current SQL database. This removes all the data and the tables.
+
+```sh
+$ rake db:delete
+```
+
 ### Encoding headers
 
 Add the `# encoding: UTF-8` header to all ruby files in the project. Useful before Ruby 2.
