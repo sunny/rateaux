@@ -62,3 +62,11 @@ Copy assets files with a digest (for example `application-d45e…565.css`) to th
 ```sh
 $ rake assets:copy_non_digested
 ```
+
+### View DB schema
+
+View the database structure
+
+```sh
+$ rake db:schema:view
+```
