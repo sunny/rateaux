@@ -13,10 +13,7 @@ namespace :db do
          ActiveRecord::Base.establish_connection @dbconfig[@environment]
          tables = ActiveRecord::Base.connection.tables.reject { |t| t == "schema_migrations" }
          tables.each do |table|
-           rows = []
-           ActiveRecord::Base.connection.columns(table).each do |column|
-           rows << [column.name,column.sql_type]
-           end
+           rows = ActiveRecord::Base.connection.columns(table).map{|column| [column.name, column.type] }
            table = Terminal::Table.new :title => "#{table.capitalize}", :headings => ['Name', 'Type'], :rows => rows
            puts table
          end
