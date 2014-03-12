@@ -16,18 +16,18 @@ Then type `bundle install` in a terminal.
 
 ### Truncate
 
-Truncate all data from the current SQL database. This removes all the data but keeps the tables.
+Delete all data from the current database.
 
 ```sh
 $ rake db:truncate
 ```
 
-### Delete
+### Drop tables
 
-Delete all data from the current SQL database. This removes all the data and the tables.
+Delete all data and tables from the current database. This is similar to `db:drop` but it does not drop the database itself.
 
 ```sh
-$ rake db:delete
+$ rake db:drop_tables
 ```
 
 ### Encoding headers

@@ -13,11 +13,15 @@ namespace :db do
     DatabaseCleaner.clean
   end
 
-  desc "Delete all tables"
-  task :delete => :establish_connection do
-    DatabaseCleaner.strategy = :deletion
-    DatabaseCleaner.clean
+  desc "Drop all tables"
+  task :drop_tables => :establish_connection do
+    ActiveRecord::Base.connection.tables.each do |table|
+      ActiveRecord::Base.connection.drop_table table
+    end
   end
+
+  # Alias to keep compatibility between rateaux v1.4.0 and v1.5.0
+  task :delete => :drop_tables
 
   # Faster than depending on :environment
   task :establish_connection => "db:load_config" do
