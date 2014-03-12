@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rateaux (1.5.0)
+    rateaux (1.6.0)
       database_cleaner
       rails (>= 3.2.17)
       terminal-table
