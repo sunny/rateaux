@@ -1,5 +1,3 @@
-require 'rspec/autorun'
-
 RSpec.configure do |config|
   # ## Mock Framework
   #
