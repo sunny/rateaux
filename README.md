@@ -1,6 +1,6 @@
 # Rateaux
 
-This is a collection of usefull Rake tasks for Rails.
+This is a collection of useful Rake tasks for Rails.
 
 ## Install
 
