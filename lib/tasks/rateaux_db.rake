@@ -3,6 +3,7 @@
 # Truncate or delete all data from an SQL database.
 #
 #     $ rake db:truncate
+#     $ rake db:drop_tables
 
 require 'database_cleaner'
 
@@ -25,7 +26,6 @@ namespace :db do
 
   # Faster than depending on :environment
   task :establish_connection => "db:load_config" do
-    config = ActiveRecord::Base.configurations[::Rails.env]
     ActiveRecord::Base.establish_connection
   end
 
