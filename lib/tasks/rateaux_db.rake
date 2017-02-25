@@ -17,7 +17,9 @@ namespace :db do
   desc "Drop all tables"
   task drop_tables: :establish_connection do
     ActiveRecord::Base.connection.tables.each do |table|
-      ActiveRecord::Base.connection.drop_table table
+      ActiveRecord::Base.connection.drop_table table,
+                                               force: :cascade,
+                                               if_exists: true
     end
   end
 
