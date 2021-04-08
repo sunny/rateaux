@@ -65,7 +65,7 @@ This will:
 Empty the cache store.
 
 ```sh
-$ rake cache_clear
+$ rake cache:clear
 ```
 
 ### Sidekiq clear
