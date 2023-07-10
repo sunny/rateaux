@@ -34,15 +34,6 @@ Delete all data and tables from the current database. This is similar to
 $ rake db:drop_tables
 ```
 
-### Encoding headers
-
-Add the `# encoding: UTF-8` header to all ruby files in the project. Useful
-before Ruby 2.
-
-```sh
-$ rake encoding_headers
-```
-
 ### Checkout
 
 Remove migrations then checkout a git branch.
@@ -65,7 +56,15 @@ This will:
 Empty the cache store.
 
 ```sh
-$ rake cache_clear
+$ rake cache:clear
+```
+
+### Sidekiq clear
+
+Empty Sidekiq’s queues.
+
+```sh
+$ rake sidekiq:clear
 ```
 
 ### Assets Copy Non Digested
@@ -83,4 +82,21 @@ View the database structure.
 
 ```sh
 $ rake db:schema:view
+```
+
+### Encoding headers
+
+Add the `# frozen_string_literal: true` header to all ruby files in the project.
+
+```sh
+$ rake frozen_string_headers
+```
+
+### Encoding headers
+
+Add the `# encoding: UTF-8` header to all ruby files in the project. Useful
+before Ruby 2.
+
+```sh
+$ rake encoding_headers
 ```

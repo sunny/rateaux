@@ -1,5 +1,12 @@
 ## unreleased
 
+## v1.7.0
+
+Features:
+- Task to clear sidekiq queues.
+- Task to add `frozen_string_literal: true` headers to Ruby files.
+- Rename `cache_clear` to `cache:clear`.
+
 Fix:
 - Force cascade deletion to `rake db:drop_tables`
 

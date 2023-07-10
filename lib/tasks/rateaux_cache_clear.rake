@@ -2,9 +2,14 @@
 #
 # Empty Rails cache
 #
-#     $ rake cache_clear
+#     $ rake cache:clear
 
-desc "Empty Rails cache"
-task :cache_clear => :environment do
-  Rails.cache.clear
+namespace :cache do
+  desc "Empty Rails cache"
+  task clear: :environment do
+    Rails.cache.clear
+  end
 end
+
+# Alias
+task cache_clear: :"cache:clear"
