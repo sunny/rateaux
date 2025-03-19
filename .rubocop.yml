@@ -1,10 +1,18 @@
+plugins:
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
 AllCops:
   NewCops: enable
-  SuggestExtensions: false
   Exclude:
     - spec/dummy/db/schema.rb
 
 Gemspec/DevelopmentDependencies:
+  # Do not require adding developemnt dependencies to the Gemfile.
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  # Allow calling `double`.
   Enabled: false
 
 Style/MixinUsage:

@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency "jquery-rails"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rubocop"
+  s.add_development_dependency "rubocop-rspec"
+  s.add_development_dependency "rubocop-rspec_rails"
   s.add_development_dependency "sqlite3"
 
   s.metadata["rubygems_mfa_required"] = "true"
