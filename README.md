@@ -34,15 +34,6 @@ Delete all data and tables from the current database. This is similar to
 $ rake db:drop_tables
 ```
 
-### Encoding headers
-
-Add the `# encoding: UTF-8` header to all ruby files in the project. Useful
-before Ruby 2.
-
-```sh
-$ rake encoding_headers
-```
-
 ### Checkout
 
 Remove migrations then checkout a git branch.
