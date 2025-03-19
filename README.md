@@ -8,7 +8,7 @@ _[Hay Rake](https://www.flickr.com/photos/49708076@N05/23047850374/) photo by La
 
 ## Install
 
-Add these line to your app's Gemfile:
+Add these lines to your app's Gemfile:
 
 ```ruby
 # Rake tasks for Rails
