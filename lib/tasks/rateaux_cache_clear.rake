@@ -1,6 +1,6 @@
 # encoding: UTF-8
 #
-# Empty Rails cache
+# Empty Rails cache.
 #
 #     $ rake cache:clear
 
