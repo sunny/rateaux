@@ -53,10 +53,10 @@ This will:
 
 ### Cache clear
 
-Empty the cache store.
+Empty the Rails cache store.
 
 ```sh
-$ rake cache_clear
+$ rake cache:clear
 ```
 
 ### Assets Copy Non Digested

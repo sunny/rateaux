@@ -2,6 +2,7 @@
 
 Breaking changes:
 - Remove `rake encoding_headers` (only useful before Ruby 2)
+- Rename `rake cache_clear` to `rake cache:clear`
 
 Fix:
 - Force cascade deletion to `rake db:drop_tables`
