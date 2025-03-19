@@ -1,5 +1,5 @@
-# encoding: UTF-8
-#
+# frozen_string_literal: true
+
 # Empty Rails cache.
 #
 #     $ rake cache:clear

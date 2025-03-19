@@ -2,7 +2,6 @@
 
 This is a collection of useful Rake tasks for Rails.
 
-
 ## Install
 
 Add these line to your app's Gemfile:
@@ -84,7 +83,7 @@ View the database structure.
 $ rake db:schema:view
 ```
 
-# Frozen string literal
+### Frozen string literal
 
 Add the `# frozen_string_literal: true` header to all Ruby files in the project.
 

@@ -1,10 +1,10 @@
-# encoding: UTF-8
+# frozen_string_literal: true
 
 namespace :notes do
   task :mine do
     me = `whoami`.strip
-    p Rake::Task['notes:custom'].arg_names
-    #Rake::Task['notes:custom'].set_arg_names([:annotation])
-    Rake::Task['notes:custom'].invoke("TODO @#{me}")
+    p Rake::Task["notes:custom"].arg_names
+    # Rake::Task["notes:custom"].set_arg_names([:annotation])
+    Rake::Task["notes:custom"].invoke("TODO @#{me}")
   end
 end

@@ -1,6 +1,6 @@
-# encoding: UTF-8
-#
-# Remove migrations then checkout a git branch
+# frozen_string_literal: true
+
+# Remove migrations then checkout a git branch.
 #
 #     $ rake checkout new_branch_name
 #
@@ -15,29 +15,31 @@
 
 desc "Switch git branches and apply migrations"
 task "checkout" do
-
   # We can't checkout if we're dirty
   unless `git diff --shortstat`.blank?
-    $stderr.puts "error: Your local changes would be overwritten by checkout."
-    $stderr.puts "Please, commit your changes or stash them before you can switch branches."
+    warn "error: Your local changes would be overwritten by checkout."
+    warn "Please, commit your changes or stash them before you can switch " \
+         "branches."
     abort "Aborting"
   end
 
   # Last argument trick
   # Via http://itshouldbeuseful.wordpress.com/2011/11/07/passing-parameters-to-a-rake-task/
-  task ARGV.last do ; end
+  task ARGV.last do
+    # DO nothing
+  end
   branch_name = ARGV.last
 
   # List migrations
   changes = `git diff #{branch_name} --name-status`.lines
-  migrations = changes.map { |change|
-    match = /^A.*migrate\/([0-9]+)/.match(change)
+  migrations = changes.map do |change|
+    match = %r{^A.*migrate/([0-9]+)}.match(change)
     match ? match[1] : nil
-  }.compact
+  end.compact
 
   # Drop it like it's hot
   migrations.sort.reverse.each do |migration|
-    # TODO we're already in rake, we should call these tasks directly
+    # TODO: we're already in rake, we should call these tasks directly
     sh "bundle exec rake db:migrate:down VERSION=#{migration}"
   end
 

@@ -8,7 +8,7 @@ desc "Adds the frozen_string_literal header to all Ruby files"
 task add_frozen_string_literal_headers: :environment do
   files = []
   ["*.rb", "*.rake"].each do |extension|
-    files.concat(Dir[File.join(Dir.getwd.split(/\\/), "**", extension)])
+    files.concat(Dir[File.join(Dir.getwd.split("\\"), "**", extension)])
   end
 
   header = "# frozen_string_literal: true\n"

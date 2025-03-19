@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rateaux/file_task"
 include Rateaux::FileTask
 
