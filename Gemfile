@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "http://rubygems.org"
 
 # Declare your gem's dependencies in rateaux.gemspec.

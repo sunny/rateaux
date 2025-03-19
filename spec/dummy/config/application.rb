@@ -1,6 +1,8 @@
-require File.expand_path('../boot', __FILE__)
+# frozen_string_literal: true
 
-require 'rails/all'
+require File.expand_path("boot", __dir__)
+
+require "rails/all"
 
 Bundler.require(*Rails.groups)
 require "rateaux"
@@ -47,7 +49,6 @@ module Dummy
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = "1.0"
   end
 end
-

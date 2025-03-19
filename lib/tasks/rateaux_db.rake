@@ -1,11 +1,11 @@
-# encoding: UTF-8
-#
+# frozen_string_literal: true
+
 # Truncate or delete all data from an SQL database.
 #
 #     $ rake db:truncate
 #     $ rake db:drop_tables
 
-require 'database_cleaner'
+require "database_cleaner"
 
 namespace :db do
   desc "Truncate all tables"

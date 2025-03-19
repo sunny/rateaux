@@ -1,0 +1,17 @@
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - spec/dummy/db/schema.rb
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+Style/MixinUsage:
+  # Allow `include` in rake task root.
+  Exclude:
+    - "**/*.rake"
+
+Style/StringLiterals:
+  # Prefer "double quotes" over 'single quotes'.
+  EnforcedStyle: double_quotes
