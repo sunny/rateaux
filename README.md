@@ -1,6 +1,10 @@
 # Rateaux
 
-This is a collection of useful Rake tasks for Rails.
+This is a collection of useful Rake tasks for Ruby on Rails applications.
+
+![Photo of an old wooden Rake on top of hay](https://github.com/user-attachments/assets/a1549ae8-a20f-4c87-a634-4298223bbb6e)
+
+_[Hay Rake](https://www.flickr.com/photos/49708076@N05/23047850374/) photo by Larry Lamb_
 
 ## Install
 
@@ -14,7 +18,7 @@ gem "rateaux"
 Then call `bundle install`.
 
 
-## Rake Tasks
+## Tasks
 
 ### DB Truncate
 
@@ -90,3 +94,7 @@ Add the `# frozen_string_literal: true` header to all Ruby files in the project.
 ```sh
 $ rake add_frozen_string_literal_headers
 ```
+
+## The name
+
+In French _rateaux_ means _rakes_.
