@@ -18,7 +18,8 @@ task "checkout" do
   # We can't checkout if we're dirty
   unless `git diff --shortstat`.blank?
     warn "error: Your local changes would be overwritten by checkout."
-    warn "Please, commit your changes or stash them before you can switch branches."
+    warn "Please, commit your changes or stash them before you can switch " \
+         "branches."
     abort "Aborting"
   end
 

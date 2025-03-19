@@ -11,9 +11,15 @@ Gemspec/DevelopmentDependencies:
   # Do not require adding developemnt dependencies to the Gemfile.
   Enabled: false
 
+Layout/LineLength:
+  Max: 80
+
 RSpec/VerifiedDoubles:
   # Allow calling `double`.
   Enabled: false
+
+Style/AsciiComments:
+  Enabled: true
 
 Style/MixinUsage:
   # Allow `include` in rake task root.

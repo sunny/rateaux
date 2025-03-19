@@ -15,7 +15,7 @@ module Rateaux
   #     namespaced :export do
   #       default: [:a, :b]
   #
-  #       …
+  #       ...
   #     end
   #
   # Is the same as:
@@ -25,7 +25,7 @@ module Rateaux
   #
   #     desc "Export everything"
   #     namespaced :export, [:a, :b] do
-  #       …
+  #       ...
   #     end
   #
   # Both definitions add a task "export" that cals "export:a" and "export:b"
