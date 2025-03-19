@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Empty all of Sidekiq’s queues.
+# Empty all of Sidekiq's queues.
 #
 #     $ rake sidekiq:flush
 
