@@ -6,6 +6,7 @@ Breaking changes:
 
 Features:
 - Add `rake add_frozen_string_literal_headers` task.
+- Add `rake sidekiq:flush` task.
 
 Fix:
 - Force cascade deletion to `rake db:drop_tables`.

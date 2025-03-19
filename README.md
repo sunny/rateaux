@@ -59,6 +59,14 @@ Empty the Rails cache store.
 $ rake cache:clear
 ```
 
+### Sidekiq flush
+
+Empty Sidekiq’s queues.
+
+```sh
+$ rake sidekiq:flush
+```
+
 ### Assets Copy Non Digested
 
 Copy assets files with a digest (for example `application-d45e…565.css`)
