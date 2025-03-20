@@ -1,5 +1,7 @@
 ## unreleased
 
+## v2.0.0
+
 Breaking changes:
 - Remove `rake encoding_headers` (only useful before Ruby 2).
 - Rename `rake cache_clear` to `rake cache:clear`.
