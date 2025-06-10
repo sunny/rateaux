@@ -37,6 +37,15 @@ Delete all data and tables from the current database. This is similar to
 $ rake db:drop_tables
 ```
 
+### DB Migrate Delete Orphaned
+
+When your migration errors with "No migration with version number" you can call
+this to delete all migrations that don’t have associated files anymore.
+
+```sh
+$ rake db:migrate:delete_orphaned
+```
+
 ### Checkout
 
 Remove migrations then checkout a git branch.
