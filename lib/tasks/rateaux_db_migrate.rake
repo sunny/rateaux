@@ -9,10 +9,10 @@ namespace :db do
     task delete_orphaned: :environment do
       removed_file_versions =
         ActiveRecord::Base
-          .connection_pool
-          .migration_context
-          .migrations_status
-          .filter_map { |_, version, name| version if name.include?("NO FILE") }
+        .connection_pool
+        .migration_context
+        .migrations_status
+        .filter_map { |_, version, name| version if name.include?("NO FILE") }
 
       removed_file_versions.each do |version|
         puts "Deleting orphaned version #{version}"
