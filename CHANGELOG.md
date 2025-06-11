@@ -1,5 +1,8 @@
 ## unreleased
 
+Features:
+- Add `rake db:migrate:delete_orphaned` task.
+
 ## v2.0.0
 
 Breaking changes:
