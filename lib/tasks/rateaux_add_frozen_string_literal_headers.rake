@@ -14,6 +14,8 @@ task add_frozen_string_literal_headers: :environment do
   header = "# frozen_string_literal: true\n"
 
   files.each do |file|
+    next if file.end_with?("db/schema.rb")
+
     content = File.read(file)
     next if content[0..header.length] == header
 

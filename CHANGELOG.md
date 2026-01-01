@@ -1,6 +1,7 @@
 ## unreleased
 
 Features:
+- Add `rake i18n:word_count` task.
 - Add `rake db:migrate:delete_orphaned` task.
 
 ## v2.0.0
