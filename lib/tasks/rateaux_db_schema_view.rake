@@ -15,7 +15,7 @@ namespace :db do
           [column.name, column.type]
         end
         table = Terminal::Table.new(
-          title: table.capitalize.to_s,
+          title: table,
           headings: %w[Name Type],
           rows: rows,
         )
