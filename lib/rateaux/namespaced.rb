@@ -13,7 +13,7 @@ module Rateaux
   #
   #     desc "Export everything"
   #     namespaced :export do
-  #       default: [:a, :b]
+  #       task default: [:a, :b]
   #
   #       ...
   #     end

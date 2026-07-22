@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "database_cleaner"
   s.add_dependency "rails", ">= 3.2.20"
   s.add_dependency "terminal-table"
+  s.add_dependency "unicode-emoji"
 
   s.add_development_dependency "jquery-rails"
   s.add_development_dependency "rspec-rails"
