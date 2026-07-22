@@ -25,5 +25,7 @@ module Dummy
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
+
+    config.active_support.to_time_preserves_timezone = :zone
   end
 end

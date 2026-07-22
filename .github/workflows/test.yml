@@ -1,0 +1,22 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      RAILS_ENV: test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7.0.0
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1.316.0
+        with:
+          bundler-cache: true
+
+      - name: RSpec
+        run: bin/rspec

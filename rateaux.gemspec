@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency "unicode-emoji"
 
   s.add_development_dependency "jquery-rails"
+  s.add_development_dependency "rspec"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rubocop"
   s.add_development_dependency "rubocop-rspec"
