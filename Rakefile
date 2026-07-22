@@ -1,7 +1,8 @@
 #!/usr/bin/env rake
 # frozen_string_literal: true
 
-# bundler
+# Bundler
+
 begin
   require "bundler/setup"
 rescue LoadError
@@ -10,7 +11,8 @@ end
 
 Bundler::GemHelper.install_tasks
 
-# rdoc
+# RDoc
+
 begin
   require "rdoc/task"
 rescue LoadError
@@ -27,7 +29,15 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include("lib/**/*.rb")
 end
 
-# rspec
+# RSpec
+
 require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec)
-task default: :spec
+
+# RuboCop
+
+require "rubocop/rake_task"
+
+RuboCop::RakeTask.new
+
+task default: %i[spec rubocop]

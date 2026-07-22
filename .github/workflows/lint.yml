@@ -1,14 +1,11 @@
-name: Test
+name: Lint
 
 on: [push]
 
 jobs:
-  test:
+  lint:
     timeout-minutes: 5
     runs-on: ubuntu-latest
-
-    env:
-      RAILS_ENV: test
 
     steps:
       - name: Checkout repository
@@ -19,5 +16,5 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: RSpec
-        run: bin/rspec
+      - name: RuboCop
+        run: bin/rubocop

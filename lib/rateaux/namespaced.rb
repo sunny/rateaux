@@ -34,7 +34,7 @@ module Rateaux
   #     task export: ["export:a", "export:b"]
   #
   module Namespaced
-    def namespaced(name, defaults = :default, &block)
+    def namespaced(name, defaults = :default, &)
       case defaults
       when Symbol, String
         task name => "#{name}:#{defaults}"
@@ -44,7 +44,7 @@ module Rateaux
         task name => defaults.to_a.map { |t| "#{name}:#{t}" }
       end
 
-      namespace name, &block
+      namespace(name, &)
     end
   end
 end
