@@ -1,5 +1,10 @@
 ## unreleased
 
+# v2.2.0
+
+Features:
+- Add `rake db:schema:print_dump` task.
+
 ## v2.1.0
 
 Dependencies:
