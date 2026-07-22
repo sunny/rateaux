@@ -22,8 +22,6 @@ task add_frozen_string_literal_headers: :environment do
     content = content.gsub(/^# (frozen_string_literal: true)\n/i, "")
     content = "#{header}#{content}"
 
-    new_file = File.open(file, "w")
-    new_file.write(content)
-    new_file.close
+    File.write(file, content)
   end
 end
