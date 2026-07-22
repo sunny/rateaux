@@ -47,10 +47,19 @@ $ rake db:migrate:delete_orphaned
 
 ### DB schema view
 
-View the database structure.
+View the database structure as an ascii table.
 
 ```sh
 $ rake db:schema:view
+```
+
+### DB schema print dump
+
+Print the database structure as a Ruby file. Like `db:schema:dump` but printed
+out instead of written to `db/schema.rb`.
+
+```sh
+$ rake db:schema:print_dump
 ```
 
 ### I18n word count
@@ -63,7 +72,7 @@ $ rake i18n:word_count
 
 ### Checkout
 
-Remove migrations then checkout a git branch.
+Remove Rails migrations then checkout a git branch.
 
 ```sh
 $ rake checkout new_branch_name

@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
+require "terminal-table"
+
 # View database schema.
 #
 #     $ rake db:schema:view
-require "terminal-table"
 namespace :db do
   namespace :schema do
     desc "View database schema"
