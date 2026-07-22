@@ -1,25 +1,33 @@
 plugins:
   - rubocop-rspec
-  - rubocop-rspec_rails
 
 AllCops:
   NewCops: enable
+  SuggestExtensions: false
   Exclude:
     - spec/dummy/db/schema.rb
+    - vendor/bundle/**/*
+
+# Gemspec
 
 Gemspec/DevelopmentDependencies:
   # Do not require adding developemnt dependencies to the Gemfile.
   Enabled: false
 
+# Layout
+
 Layout/LineLength:
   Max: 80
+  Exclude:
+    - "bin/*"
 
-RSpec/VerifiedDoubles:
-  # Allow calling `double`.
-  Enabled: false
+# Style
 
 Style/AsciiComments:
   Enabled: true
+
+Style/Documentation:
+  Enabled: false
 
 Style/MixinUsage:
   # Allow `include` in rake task root.
@@ -29,3 +37,9 @@ Style/MixinUsage:
 Style/StringLiterals:
   # Prefer "double quotes" over 'single quotes'.
   EnforcedStyle: double_quotes
+
+# RSpec
+
+RSpec/VerifiedDoubles:
+  # Allow calling `double`.
+  Enabled: false

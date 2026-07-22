@@ -30,8 +30,8 @@ module Rateaux
   #     end
   #
   module FileTask
-    def file_task(path, definition, &block)
-      t = task(definition, &block)
+    def file_task(path, definition, &)
+      t = task(definition, &)
 
       file(path) do
         Rake::Task[t.name].invoke

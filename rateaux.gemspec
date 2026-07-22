@@ -12,24 +12,17 @@ Gem::Specification.new do |s|
   s.authors     = ["Sunny Ripert"]
   s.email       = ["sunny@sunfox.org"]
   s.homepage    = "http://github.com/sunny/rateaux"
-  s.summary     = "A collection of usefull Rake tasks for Rails."
-  s.description = "A collection of usefull Rake tasks for Rails."
+  s.summary     = "A collection of useful Rake tasks for Rails."
+  s.description = "A collection of useful Rake tasks for Rails."
 
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.required_ruby_version = ">= 2.7.0"
+  s.required_ruby_version = ">= 3.2"
+
   s.add_dependency "database_cleaner"
   s.add_dependency "rails", ">= 3.2.20"
   s.add_dependency "terminal-table"
   s.add_dependency "unicode-emoji"
-
-  s.add_development_dependency "jquery-rails"
-  s.add_development_dependency "rspec"
-  s.add_development_dependency "rspec-rails"
-  s.add_development_dependency "rubocop"
-  s.add_development_dependency "rubocop-rspec"
-  s.add_development_dependency "rubocop-rspec_rails"
-  s.add_development_dependency "sqlite3"
 
   s.metadata["rubygems_mfa_required"] = "true"
 end

@@ -17,7 +17,7 @@ namespace :db do
         table = Terminal::Table.new(
           title: table,
           headings: %w[Name Type],
-          rows: rows,
+          rows: rows
         )
         puts table
       end

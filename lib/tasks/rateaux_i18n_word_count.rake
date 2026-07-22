@@ -10,7 +10,7 @@ class RateauxI18nWordCount
   include ActionView::Helpers::SanitizeHelper
 
   def words_for_locale(locale)
-    translations = I18n.t(".", locale:)
+    translations = I18n.t(".", locale: locale)
     words = hash_string_values(translations).flat_map do |translation|
       strip_tags(translation).split(/\s+/)
     end
