@@ -1,5 +1,10 @@
 ## unreleased
 
+## v2.1.0
+
+Dependencies:
+- Drop support for Ruby < 3.2
+
 Features:
 - Add `rake i18n:word_count` task.
 - Add `rake db:migrate:delete_orphaned` task.

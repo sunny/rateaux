@@ -111,6 +111,24 @@ Add the `# frozen_string_literal: true` header to all Ruby files in the project.
 $ rake add_frozen_string_literal_headers
 ```
 
+
+## Release
+
+To release a new version, update `CHANGELOG.md`, update the version in
+`lib/rateaux/version.rb`.
+
+Then:
+
+```sh
+git add CHANGELOG.md lib/rateaux/version.rb
+git commit -m v`ruby -r./lib/rateaux/version <<< 'puts Rateaux::VERSION'`
+bin/rake release
+```
+
+## License
+
+The gem is available as open source under the terms of the [MIT License].
+
 ## The name
 
 In French _rateaux_ means _rakes_.
