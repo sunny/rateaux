@@ -127,8 +127,9 @@ bin/rake release
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License].
+The gem is available as open source under the terms of the
+[MIT License](http://opensource.org/licenses/MIT).
 
 ## The name
 
-In French _rateaux_ means _rakes_.
+In French _rateaux_ means _rakes_. 🌾
