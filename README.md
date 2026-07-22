@@ -17,7 +17,6 @@ gem "rateaux"
 
 Then call `bundle install`.
 
-
 ## Tasks
 
 ### DB Truncate
@@ -44,6 +43,22 @@ this to delete all migrations that don’t have associated files anymore.
 
 ```sh
 $ rake db:migrate:delete_orphaned
+```
+
+### DB schema view
+
+View the database structure.
+
+```sh
+$ rake db:schema:view
+```
+
+### I18n word count
+
+Show the number of translated words in every available locale.
+
+```sh
+$ rake i18n:word_count
 ```
 
 ### Checkout
@@ -86,14 +101,6 @@ to their non-digested form (for example `application.css`).
 
 ```sh
 $ rake assets:copy_non_digested
-```
-
-### DB schema view
-
-View the database structure.
-
-```sh
-$ rake db:schema:view
 ```
 
 ### Frozen string literal
