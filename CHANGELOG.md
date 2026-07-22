@@ -5,6 +5,7 @@ Features:
 - Add `rake db:migrate:delete_orphaned` task.
 
 Fix:
+- Use default database connection for `rake db:schema:view` task.
 - Ignore `db/schema.rb` in `rake add_frozen_string_literal_headers` task.
 
 ## v2.0.0
